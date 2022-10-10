@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 class Controller {
 
+    // add docs
     @GetMapping("/")
     suspend fun getHello(): String {
         return "hello world"
