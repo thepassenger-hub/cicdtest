@@ -20,6 +20,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Run tests
+        run: |
+          echo $(ls -la)
+          echo $PWD
 
       # Runs a single command using the runners shell
       - name: Run tests
