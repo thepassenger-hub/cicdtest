@@ -31,3 +31,18 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Print ok
         run: echo "TEsts passed"
+        
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge dev -> master
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          target_branch: master
+          github_token: ${{ github.token }}
+
+      - name: log success
+        run: echo "merged to master"
