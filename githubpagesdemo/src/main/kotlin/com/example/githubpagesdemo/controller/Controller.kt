@@ -14,4 +14,9 @@ class Controller {
     suspend fun getHello(): String {
         return "hello world"
     }
+
+    @GetMapping("/stuff")
+    suspend fun getStuff(): String {
+        return "stuff"
+    }
 }
